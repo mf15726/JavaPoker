@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+    backend:
+        container_name: backend
+        build: ../BackEnd
+        image: javapoker-backend:latest
+        ports:
+            - "8000:8000"
+        networks:
+            - javapoker-network
+
+networks: 
+    javapoker-network:
